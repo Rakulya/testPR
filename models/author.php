@@ -64,14 +64,12 @@ class author extends ActiveRecord
     }
 
     public function getBook(){
-        return $this->hasOne(Book::className(), ['autor' => 'u_id']);
+        return $this->hasMany(Book::className(), ['autor' => 'u_id']);
     }
 
     public function getParentName()
     {
-        $query=book::find();
-        $query->count('autor=')->asArray();
-        return $query;
+               return  $this->getBook()->count();
     }
 }
 ?>
