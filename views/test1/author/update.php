@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Country */
 
-$this->title = 'Update Author: {nameAttribute}';
+$this->title = 'Изменение автора: '.$model->surname;
 $this->params['breadcrumbs'][] = ['label' => 'author', 'url' => ['author']];
 $this->params['breadcrumbs'][] = ['label' => $model->surname, 'url' => ['view', 'id' => $model->u_id]];
 $this->params['breadcrumbs'][] = 'Update';
